@@ -15,7 +15,8 @@
 struct list_head *q_new()
 {
     struct list_head *l = malloc(sizeof(struct list_head));
-    l->prev = l->next = l;
+    if (l)
+        INIT_LIST_HEAD(l);
     return l;
 }
 
@@ -25,7 +26,8 @@ void q_free(struct list_head *l) {}
 /* Insert an element at head of queue */
 bool q_insert_head(struct list_head *head, char *s)
 {
-    return true;
+    // if (!head)
+    return false;
 }
 
 /* Insert an element at tail of queue */
