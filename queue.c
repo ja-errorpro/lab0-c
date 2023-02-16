@@ -25,9 +25,9 @@ void q_free(struct list_head *l)
 {
     if (!l)
         return;
-    element_t *il;
-    list_for_each_entry (il, l, list)
-        free(il);
+    element_t *il, *tmp;
+    list_for_each_entry_safe (il, tmp, l, list)
+        q_release_element(il);
     free(l);
 }
 
