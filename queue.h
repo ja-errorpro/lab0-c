@@ -134,7 +134,7 @@ int q_size(struct list_head *head);
  *
  * The middle node of a linked list of size n is the
  * ⌊n / 2⌋th node from the start using 0-based indexing.
- * If there're six element, the third member should be return.
+ * If there're six elements, the third member should be returned.
  *
  * Reference:
  * https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/
@@ -156,7 +156,7 @@ bool q_delete_mid(struct list_head *head);
 bool q_delete_dup(struct list_head *head);
 
 /**
- * q_delete_dup() - Swap every two adjacent nodes
+ * q_swap() - Swap every two adjacent nodes
  * @head: header of queue
  *
  * Reference:
